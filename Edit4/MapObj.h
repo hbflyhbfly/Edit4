@@ -9,16 +9,21 @@
 #import <Cocoa/Cocoa.h>
 
 @interface MapObj : NSImageView
-{
-    NSPoint lastLoc;
-}
 
-@property (nonatomic,retain) NSString *name;
-@property (nonatomic,retain) NSString *type;
+@property (nonatomic,assign) NSString *name;
+@property (nonatomic,assign) NSString *type;
+@property (nonatomic,assign) int targetX;
+@property (nonatomic,assign) int targetY;
+@property (nonatomic,assign) NSString *icon;
+
+@property (nonatomic,assign) NSPoint lastLoc;
+
 @property (nonatomic,assign) NSPoint loc;
 @property (nonatomic,assign) double eventTime;
 
 
 -(void)loadData:(NSDictionary*)data;
 -(void)setPosition:(NSPoint )point;
+-(NSDictionary*)getData;
+-(void)setSave:(NSDictionary*)save;
 @end

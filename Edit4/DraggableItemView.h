@@ -55,23 +55,30 @@
     BOOL dragging;
     NSPoint lastDragLocation;
     MapObj* selcetObj;
-    
 }
 @property (nonatomic,retain) NSMutableDictionary *objects;
+@property (nonatomic,retain) NSMutableDictionary *routes;
 @property (nonatomic,strong) IBOutlet NSImageView *map;
+@property (nonatomic,strong) IBOutlet NSView *routesMap;
+
 @property (nonatomic,strong) IBOutlet EditView *edit;
 
-
+@property(nonatomic,assign) BOOL isAddRoute;
+@property(nonatomic,assign) BOOL isDeleteRoute;
 
 - (id)initWithFrame:(NSRect)frame;
-
 
 -(void)mouseDown:(NSEvent *)event;
 -(void)mouseDragged:(NSEvent *)event;
 -(void)mouseUp:(NSEvent *)event;
 
+-(void)clearAll;
+
+-(void)loadMap:(NSDictionary*)mapData;
+
 - (BOOL)isPointInItem:(NSPoint)testPoint;
 
+-(NSMutableDictionary*)mapData;
 
 @end
 

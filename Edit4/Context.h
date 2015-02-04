@@ -12,20 +12,37 @@
 
 #define RHOMBUSNCOORDINATEWIDTH 30
 
-#define RHOMBUSNLAYERWIDTH 900
+#define MAPWIDTH 1200
+#define MAPHEIGHT 1200
+
 
 @interface Context : NSViewController<NSTableViewDataSource, NSTableViewDelegate>
+{
+    NSPoint lastDragPoint;
+}
 
 @property (nonatomic,strong) IBOutlet NSTableView *objectsTable;
 
 @property (nonatomic,strong) IBOutlet NSView *container;
 
-@property (nonatomic,strong) IBOutlet NSImageView *map;
+@property (nonatomic,strong) IBOutlet NSView *scroll;
+
+
+@property (nonatomic,strong) IBOutlet NSImageView *background;
+
+@property (nonatomic,strong) IBOutlet NSButton *addBnt;
+
+@property (nonatomic,strong) IBOutlet NSButton *saveBnt;
+
+@property (nonatomic,strong) IBOutlet NSButton *loadBnt;
+
+@property (nonatomic,strong) IBOutlet NSButton *routeBnt;
+
+@property (nonatomic,strong) IBOutlet NSButton *delRouteBnt;
 
 @property (nonatomic,strong) IBOutlet DraggableItemView *dragView;
-
+@property (nonatomic,strong) IBOutlet EditView *edit;
 
 @property (nonatomic,retain) NSMutableArray *objectsTableData;
-
 
 @end

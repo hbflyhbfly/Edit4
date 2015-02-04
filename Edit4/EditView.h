@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "MapObj.h"
 
 @interface EditView : NSView
 
@@ -17,5 +18,9 @@
 
 @property (nonatomic,strong) IBOutlet NSTextField *targetX;
 @property (nonatomic,strong) IBOutlet NSTextField *targetY;
+
+@property (nonatomic,assign) MapObj* selfObj;
+
+-(void)setObject:(MapObj*)obj;
 
 @end

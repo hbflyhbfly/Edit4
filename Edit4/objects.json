@@ -1,0 +1,32 @@
+{
+    "obj1": {
+        "name": "obj1",
+        "type": "type1",
+        "icon": "obj1.jpg",
+        "description":"description"
+    },
+    "obj2": {
+        "name": "obj2",
+        "type": "type2",
+        "icon": "obj2.jpg",
+        "description":"description"
+    },
+    "obj3": {
+        "name": "obj3",
+        "type": "type3",
+        "icon": "obj3.jpg",
+        "description":"description"
+    },
+    "obj4": {
+        "name": "obj4",
+        "type": "type4",
+        "icon": "obj4.jpg",
+        "description":"description"
+    },
+    "obj5": {
+        "name": "obj5",
+        "type": "route",
+        "icon": "obj5.jpg",
+        "description":"路"
+    }
+}
