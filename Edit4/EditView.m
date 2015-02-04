@@ -25,12 +25,14 @@
         self.type.stringValue = obj.type;
         self.targetX.stringValue = [NSString stringWithFormat:@"%d",obj.targetX ];
         self.targetY.stringValue = [NSString stringWithFormat:@"%d",obj.targetY ];
+        self.eventTime.stringValue = [NSString stringWithFormat:@"%.1f",obj.eventTime];
     }else{
         self.selfObj = obj;
         self.name.stringValue = @"";
         self.type.stringValue = @"";
         self.targetX.stringValue = @"";
         self.targetY.stringValue = @"";
+        self.eventTime.stringValue = @"";
     }
 }
 

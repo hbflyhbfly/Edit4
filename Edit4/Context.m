@@ -236,11 +236,14 @@ writeRowsWithIndexes:(NSIndexSet *)rowIndexes
 -(void)controlTextDidEndEditing:(NSNotification *)obj{
     NSTextField *textField = [obj object];
     MapObj* selectObj = [self.dragView.objects objectForKey:NSStringFromPoint(self.edit.selfObj.loc)];
+    
     if (selectObj) {
         if([textField.identifier isEqualToString:@"target_x"]){
             selectObj.targetX = [[textField stringValue] intValue];
         }else if([textField.identifier isEqualToString:@"target_y"]){
             selectObj.targetY = [[textField stringValue] intValue];
+        }else if([textField.identifier isEqualToString:@"event_time"]){
+            selectObj.eventTime = [[textField stringValue] doubleValue];
         }
     }
 }
